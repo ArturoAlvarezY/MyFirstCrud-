@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 @Table (name = "requests")
 
 
-public class Request {
+public class RequestModels {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,11 +30,11 @@ public class Request {
     @Column (name = "description_consult")
     private String descriptionConsult;
 
-    public Request(){
+    public RequestModels(){
 
     }
 
-    public Request(Long id, String solicitantName, LocalDateTime requestDate, String subjectConsult,
+    public RequestModels(Long id, String solicitantName, LocalDateTime requestDate, String subjectConsult,
             String descriptionConsult) {
         this.id = id;
         this.solicitantName = solicitantName;
