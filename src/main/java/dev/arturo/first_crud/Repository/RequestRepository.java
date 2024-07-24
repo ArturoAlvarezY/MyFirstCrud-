@@ -5,15 +5,21 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import dev.arturo.first_crud.models.RequestModels;
+import dev.arturo.first_crud.models.Request;
 
-public interface RequestRepository extends JpaRepository<RequestModels, Long> {
+public interface RequestRepository extends JpaRepository<Request, Long> {
 
-    List<RequestModels>findBySolicitantName(String solicitantName);
+    List<Request>findBySolicitantName(String solicitantName);
 
-    List<RequestModels>findByRequestDate(LocalDateTime requestDate);
+    List<Request>findByRequestDate(LocalDateTime requestDate);
 
-    RequestModels findByIdAndSolicitantName(Long id, String solicitantName);
+    Request findByIdAndSolicitantName(Long id, String solicitantName);
 
-    
+    List <Request> findByDescriptionConsult(String descriptionConsult);
+
+    List <Request> findBySubjectConsult(String subjectConsult);
+
+    List <Request> findByDate(LocalDateTime requestDate);
+
+
 } 
