@@ -8,20 +8,16 @@ import dev.arturo.first_crud.models.Request;
 
 public interface RequestService {
     
-List <Request> getAllRequests();
+List <Request> findAllRequests();
 
-Optional <Request> getRequestById(Long id);  
+Optional <Request> findRequestById(Long id);  
 
-List <Request> getRequestBySolicitantName(String solicitantName);
+List <Request> findRequestBySolicitantName(String solicitantName);
 
-List <Request> getRequestByDate(LocalDateTime requestDate);
+List <Request> findRequestByDate(LocalDateTime requestDate);
 
-List <Request> getRequestBySubjectConsult(String subjectConsult);
+List <Request> findRequestBySubjectConsult(String subjectConsult);
 
-List <Request> getRequestByDescriptionConsult(String descriptionConsult);
-
-
-
-
+List <Request> findRequestByDescriptionConsult(String descriptionConsult);
 
 }
