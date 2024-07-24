@@ -19,7 +19,4 @@ public interface RequestRepository extends JpaRepository<Request, Long> {
 
     List <Request> findBySubjectConsult(String subjectConsult);
 
-    List <Request> findByDate(LocalDateTime requestDate);
-
-
 } 
