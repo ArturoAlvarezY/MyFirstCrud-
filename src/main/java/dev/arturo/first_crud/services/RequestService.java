@@ -20,4 +20,5 @@ List <Request> findRequestBySubjectConsult(String subjectConsult);
 
 List <Request> findRequestByDescriptionConsult(String descriptionConsult);
 
+Request saveRequest(Request request);
 }

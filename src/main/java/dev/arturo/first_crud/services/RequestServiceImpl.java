@@ -65,6 +65,10 @@ public class RequestServiceImpl implements RequestService {
     @Override
     public List<Request> findRequestByDescriptionConsult(String descriptionConsult) {
     return requestRepository.findByDescriptionConsult(descriptionConsult);
+    }
 
+    @Override
+    public Request saveRequest(Request request) {
+      return requestRepository.save(request);
     }
 }
