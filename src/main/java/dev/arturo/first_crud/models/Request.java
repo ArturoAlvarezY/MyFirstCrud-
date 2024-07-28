@@ -19,16 +19,16 @@ public class Request {
     private Long id;
     
      
-    @Column (name = "solicitant_name")
+    @Column (name = "solicitant_name", nullable = false)
     private String solicitantName;
 
-    @Column (name = "request_date")
+    @Column (name = "request_date", nullable = false)
     private LocalDateTime  requestDate;
 
-    @Column (name = "subject_consult")
+    @Column (name = "subject_consult", nullable = false)
     private String subjectConsult;
 
-    @Column (name = "description_consult")
+    @Column (name = "description_consult", nullable = false)
     private String descriptionConsult;
     
     public Request(){
